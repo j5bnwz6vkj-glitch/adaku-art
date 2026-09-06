@@ -116,6 +116,36 @@
     if (start) show(start.title);
   }
 
+  /* ---- featured video: poster upgrades to an inline player on click ---- */
+  var VIDEO = window.ADAKU_VIDEO;
+  var film = document.querySelector('.filmcard');
+  if (film && VIDEO && VIDEO.id) {
+    var link = film.querySelector('a');
+    var cap  = document.getElementById('filmCap');
+    if (link) link.href = 'https://www.youtube.com/watch?v=' + VIDEO.id;
+    if (cap && VIDEO.title) {
+      cap.textContent = VIDEO.title + (VIDEO.caption ? ' \u2014 ' + VIDEO.caption : '');
+    }
+    var play = function (e) {
+      if (e) e.preventDefault();
+      if (film.querySelector('iframe')) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO.id + '?autoplay=1&rel=0';
+      f.title = VIDEO.title || 'ADAKU video';
+      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      film.innerHTML = '';
+      film.appendChild(f);
+    };
+    if (link) link.addEventListener('click', play);
+    var watch = document.getElementById('watchLatest');
+    if (watch) watch.addEventListener('click', function (e) {
+      e.preventDefault();
+      film.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(play, 450);
+    });
+  }
+
   /* ---- mobile navigation ---- */
   var btn = document.querySelector('.menu-btn');
   var links = document.getElementById('navlinks');

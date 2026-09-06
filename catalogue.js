@@ -1,3 +1,11 @@
+/* Featured video — the one shown on the home page.
+   Swap the id and title when a new video is out. */
+window.ADAKU_VIDEO = {
+  id:      "Vk2JzZCvAxc",
+  title:   "NeuraLinked",
+  caption: "Official music video"
+};
+
 /* ADAKU catalogue — edit this file to change the site.
    One block per release. Order here = order on the site;
    the first five appear on the home page. */
