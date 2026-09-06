@@ -123,6 +123,8 @@
     var link = film.querySelector('a');
     var cap  = document.getElementById('filmCap');
     if (link) link.href = 'https://www.youtube.com/watch?v=' + VIDEO.id;
+    var fb = document.getElementById('ytFallback');
+    if (fb) fb.href = 'https://www.youtube.com/watch?v=' + VIDEO.id;
     if (cap && VIDEO.title) {
       cap.textContent = VIDEO.title + (VIDEO.caption ? ' \u2014 ' + VIDEO.caption : '');
     }

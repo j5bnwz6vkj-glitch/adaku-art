@@ -288,3 +288,10 @@ h1.display.short{font-size:clamp(38px,5vw,66px);letter-spacing:.2em}
 
 /* inline video player replacing the poster */
 .filmcard iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
+
+/* always-available route to YouTube, in case the embedded player is blocked */
+.film-alt{margin:14px 0 0;text-align:center}
+.film-alt a{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);
+  display:inline-flex;align-items:center;gap:10px;opacity:.85;transition:opacity .2s}
+.film-alt a:hover{opacity:1}
+.film-wrap{display:flex;flex-direction:column}
