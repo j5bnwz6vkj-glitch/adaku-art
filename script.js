@@ -14,7 +14,13 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
-  function hasLyrics(t) { return !!(LYRICS[t] && String(LYRICS[t]).trim()); }
+  function lyricEntry(t) {
+    var e = LYRICS[t];
+    if (!e) return null;
+    if (typeof e === 'string') return { credit: '', text: e };
+    return { credit: e.credit || '', text: e.text || '' };
+  }
+  function hasLyrics(t) { var e = lyricEntry(t); return !!(e && e.text.trim()); }
 
   /* cover art that degrades gracefully until the image file exists */
   function cover(r) {
@@ -62,14 +68,21 @@
     }).join('');
 
     function show(title) {
-      var text = LYRICS[title];
+      var entry = lyricEntry(title);
+      var text = entry ? entry.text : '';
       titleEl.textContent = title;
-      if (text && String(text).trim()) {
+      if (text && text.trim()) {
         bodyEl.classList.remove('placeholder');
-        bodyEl.innerHTML = String(text).trim().split(/\n{2,}/).map(function (block) {
-          return '<p>' + esc(block).replace(/\n/g, '<br>') + '</p>';
+        bodyEl.innerHTML = text.trim().split(/\n{2,}/).map(function (block) {
+          var b = block.trim();
+          if (b.indexOf('## ') === 0) {
+            var head = '<h3 class="lyric-section">' + esc(b.slice(3).split('\n')[0]) + '</h3>';
+            var rest = b.split('\n').slice(1).join('\n');
+            return head + (rest.trim() ? '<p>' + esc(rest).replace(/\n/g, '<br>') + '</p>' : '');
+          }
+          return '<p>' + esc(b).replace(/\n/g, '<br>') + '</p>';
         }).join('');
-        noteEl.textContent = 'Official lyrics';
+        noteEl.textContent = entry.credit || 'Official lyrics';
       } else {
         bodyEl.classList.add('placeholder');
         bodyEl.innerHTML = '<p>Lyrics for this song are coming soon.</p>';
