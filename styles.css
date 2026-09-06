@@ -270,10 +270,11 @@ h1.display.short{font-size:clamp(38px,5vw,66px);letter-spacing:.2em}
 .lyrics-reader .lyric-section:first-child{margin-top:0}
 
 /* hero word stack — replaces the words that used to be baked into the image */
-.hero-words{position:absolute;right:56px;top:50%;transform:translateY(-50%);z-index:2;
-  list-style:none;margin:0;padding:0;text-align:right;pointer-events:none}
+.hero-words{position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:2;
+  list-style:none;margin:0;padding:30px 56px 30px 90px;text-align:right;pointer-events:none;
+  background:radial-gradient(115% 78% at 100% 50%,rgba(12,5,8,.86) 0%,rgba(12,5,8,.58) 42%,rgba(12,5,8,0) 76%)}
 .hero-words li{font-size:12px;letter-spacing:.34em;text-transform:uppercase;
-  color:var(--gold-lt);opacity:.92;line-height:2.5;text-shadow:0 1px 10px rgba(0,0,0,.75)}
+  color:var(--gold-lt);opacity:.95;line-height:2.5;text-shadow:0 1px 3px rgba(0,0,0,.95),0 2px 14px rgba(0,0,0,.8)}
 .hero-words li:last-child{color:var(--gold);opacity:1}
 .hero-words::after{content:"";display:block;width:44px;height:1px;background:var(--gold);
   margin-left:auto;margin-top:18px;opacity:.7}
