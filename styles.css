@@ -268,3 +268,13 @@ h1.display.short{font-size:clamp(38px,5vw,66px);letter-spacing:.2em}
 .lyrics-reader .lyric-section{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
   color:var(--gold-dk);margin:26px 0 8px;font-weight:500}
 .lyrics-reader .lyric-section:first-child{margin-top:0}
+
+/* hero word stack — replaces the words that used to be baked into the image */
+.hero-words{position:absolute;right:56px;top:50%;transform:translateY(-50%);z-index:2;
+  list-style:none;margin:0;padding:0;text-align:right;pointer-events:none}
+.hero-words li{font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold-lt);opacity:.92;line-height:2.5;text-shadow:0 1px 10px rgba(0,0,0,.75)}
+.hero-words li:last-child{color:var(--gold);opacity:1}
+.hero-words::after{content:"";display:block;width:44px;height:1px;background:var(--gold);
+  margin-left:auto;margin-top:18px;opacity:.7}
+@media (max-width:900px){ .hero-words{display:none} }
