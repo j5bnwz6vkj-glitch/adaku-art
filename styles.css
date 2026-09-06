@@ -278,3 +278,9 @@ h1.display.short{font-size:clamp(38px,5vw,66px);letter-spacing:.2em}
 .hero-words::after{content:"";display:block;width:44px;height:1px;background:var(--gold);
   margin-left:auto;margin-top:18px;opacity:.7}
 @media (max-width:900px){ .hero-words{display:none} }
+
+/* release cards: pin the buttons to a common baseline */
+.card{display:flex;flex-direction:column}
+.card .frame{flex:0 0 auto}
+.card h3{min-height:2.6em}                 /* room for a two-line title everywhere */
+.card-actions{margin-top:auto;padding-top:16px}
