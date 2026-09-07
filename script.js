@@ -22,6 +22,7 @@
     if (fDate && FEATURED.date) fDate.textContent = FEATURED.date;
     if (fArt && FEATURED.artwork) { fArt.src = FEATURED.artwork; fArt.alt = FEATURED.title + ' by ADAKU cover artwork'; }
     if (fListen && FEATURED.listen) fListen.href = FEATURED.listen;
+    if (fListen && FEATURED.listenLabel && fListen.firstChild) fListen.firstChild.nodeValue = FEATURED.listenLabel + ' ';
     if (fExplore && FEATURED.explore) fExplore.href = FEATURED.explore;
   }
 
