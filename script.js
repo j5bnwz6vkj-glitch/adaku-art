@@ -5,6 +5,25 @@
 
   var RELEASES = window.ADAKU_RELEASES || [];
   var LYRICS   = window.ADAKU_LYRICS || {};
+  var FEATURED = window.ADAKU_FEATURED_RELEASE || null;
+
+  /* ---- featured release hero: one config block controls each launch ---- */
+  if (FEATURED) {
+    var fTitle = document.getElementById('featuredReleaseTitle');
+    var fEye = document.getElementById('featuredReleaseEyebrow');
+    var fTag = document.getElementById('featuredReleaseTagline');
+    var fDate = document.getElementById('featuredReleaseDate');
+    var fArt = document.getElementById('featuredReleaseArtwork');
+    var fListen = document.getElementById('featuredReleaseListen');
+    var fExplore = document.getElementById('featuredReleaseExplore');
+    if (fTitle && FEATURED.title) fTitle.textContent = FEATURED.title;
+    if (fEye && FEATURED.eyebrow) fEye.textContent = FEATURED.eyebrow;
+    if (fTag && FEATURED.tagline) fTag.textContent = FEATURED.tagline;
+    if (fDate && FEATURED.date) fDate.textContent = FEATURED.date;
+    if (fArt && FEATURED.artwork) { fArt.src = FEATURED.artwork; fArt.alt = FEATURED.title + ' by ADAKU cover artwork'; }
+    if (fListen && FEATURED.listen) fListen.href = FEATURED.listen;
+    if (fExplore && FEATURED.explore) fExplore.href = FEATURED.explore;
+  }
 
   function slug(t) {
     return String(t).toLowerCase().replace(/&/g, 'and')
