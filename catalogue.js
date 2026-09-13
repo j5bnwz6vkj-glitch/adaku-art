@@ -18,8 +18,8 @@ window.ADAKU_FEATURED_RELEASE = {
   tagline: "A vision of a cooler, greener Earth.",
   date:    "Out everywhere September 10, 2026",
   artwork: "assets/golden-sunshade.jpg",
-  listen:  "https://soundcloud.com/adakusol/golden-sunshade",
-  listenLabel: "Listen on SoundCloud",
+  listen:  "https://distrokid.com/hyperfollow/adaku1/golden-sunshade",
+  listenLabel: "Listen everywhere",
   explore: "releases.html"
 };
 
@@ -28,7 +28,7 @@ window.ADAKU_RELEASES = [
     title:  "Golden Sunshade",
     type:   "Single",
     cover:  "assets/golden-sunshade.jpg",
-    listen: "https://soundcloud.com/adakusol/golden-sunshade"
+    listen: "https://distrokid.com/hyperfollow/adaku1/golden-sunshade"
   },
   {
     title:  "Loving Grace",
