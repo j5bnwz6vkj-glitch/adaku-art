@@ -35,6 +35,13 @@ window.ADAKU_RELEASES = [
     soon:   true
   },
   {
+    title:  "Cyberconsciousness",
+    type:   "Single",
+    cover:  "assets/cyberconsciousness.jpg",
+    listen: "",
+    soon:   true
+  },
+  {
     title:  "Cafe Saint-Machine",
     type:   "Single",
     cover:  "assets/cafe-saint-machine.jpg",
