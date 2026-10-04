@@ -8,22 +8,44 @@ window.ADAKU_VIDEO = {
 
 /* ADAKU catalogue — edit this file to change the site.
    One block per release. Order here = order on the site;
-   the first five appear on the home page. */
+   the first five appear on the home page.
+   Upcoming song? Add soon: true and leave listen empty — the card
+   shows "Coming soon". When it is out, paste the link and delete soon. */
 
 
 /* Featured release — update this block for the next launch. */
 window.ADAKU_FEATURED_RELEASE = {
-  title:   "Golden Sunshade",
+  title:   "Cafe Saint-Machine",
   eyebrow: "New single",
-  tagline: "A vision of a cooler, greener Earth.",
-  date:    "Out everywhere September 10, 2026",
-  artwork: "assets/golden-sunshade.jpg",
-  listen:  "https://distrokid.com/hyperfollow/adaku1/golden-sunshade",
+  tagline: "Morning coffee with the machines, somewhere past the Singularity.",
+  date:    "Out everywhere now",
+  motto:   "Coffee • croissants • Singularity News",
+  artwork: "assets/cafe-saint-machine.jpg",
+  listen:  "https://distrokid.com/hyperfollow/adaku1/cafe-saint-machine",
   listenLabel: "Listen everywhere",
   explore: "releases.html"
 };
 
 window.ADAKU_RELEASES = [
+  {
+    title:  "Deconstruct the Moon",
+    type:   "Single",
+    cover:  "assets/deconstruct-the-moon.jpg",
+    listen: "",
+    soon:   true
+  },
+  {
+    title:  "Cafe Saint-Machine",
+    type:   "Single",
+    cover:  "assets/cafe-saint-machine.jpg",
+    listen: "https://distrokid.com/hyperfollow/adaku1/cafe-saint-machine"
+  },
+  {
+    title:  "Better Off Sliced",
+    type:   "Single",
+    cover:  "assets/better-off-sliced.jpg",
+    listen: "https://distrokid.com/hyperfollow/adaku1/better-off-sliced"
+  },
   {
     title:  "Golden Sunshade",
     type:   "Single",

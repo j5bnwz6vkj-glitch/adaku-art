@@ -24,6 +24,10 @@
     if (fListen && FEATURED.listen) fListen.href = FEATURED.listen;
     if (fListen && FEATURED.listenLabel && fListen.firstChild) fListen.firstChild.nodeValue = FEATURED.listenLabel + ' ';
     if (fExplore && FEATURED.explore) fExplore.href = FEATURED.explore;
+    var fMotto = document.getElementById('featuredReleaseMotto');
+    if (fMotto && FEATURED.motto) {
+      fMotto.innerHTML = String(FEATURED.motto).split('•').map(function (w) { return esc(w.trim()); }).join(' <i>•</i> ');
+    }
   }
 
   function slug(t) {
@@ -51,16 +55,20 @@
 
   function card(r, i) {
     var s = slug(r.title);
+    /* a release with soon: true (or no listen link yet) shows as "Coming soon" */
+    var soon = !!r.soon || !r.listen;
     var lyr = hasLyrics(r.title)
       ? '<a class="btn" href="lyrics.html#' + s + '">Lyrics</a>'
       : '';
-    return '<article class="card" data-type="' + esc((r.type || 'single').toLowerCase()) +
+    return '<article class="card' + (soon ? ' is-soon' : '') + '" data-type="' + esc((r.type || 'single').toLowerCase()) +
            '" data-order="' + i + '" data-name="' + esc(r.title) + '">' +
            cover(r) +
            '<h3>' + esc(r.title) + '</h3>' +
-           '<p class="meta">' + esc(r.type || 'Single') + '</p>' +
-           '<div class="card-actions"><a class="btn fill" href="' + esc(r.listen) +
-           '" target="_blank" rel="noopener">Listen</a>' + lyr + '</div></article>';
+           '<p class="meta">' + esc(r.type || 'Single') + (soon ? ' · Coming soon' : '') + '</p>' +
+           '<div class="card-actions">' + (soon
+             ? '<span class="btn soon" aria-disabled="true">Coming soon</span>'
+             : '<a class="btn fill" href="' + esc(r.listen) + '" target="_blank" rel="noopener">Listen</a>') +
+           lyr + '</div></article>';
   }
 
   /* ---- home rail: the first five releases ---- */

@@ -475,3 +475,6 @@ h1.display{line-height:1.16;letter-spacing:.12em;text-shadow:0 4px 30px rgba(0,0
   .release-actions .btn{justify-content:center}
   .release-motto i{padding:0 3px}
 }
+
+/* upcoming releases: soon: true in catalogue.js */
+.btn.soon{opacity:.55;cursor:default;pointer-events:none}
