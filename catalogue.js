@@ -15,15 +15,44 @@ window.ADAKU_VIDEO = {
 
 /* Featured release — update this block for the next launch. */
 window.ADAKU_FEATURED_RELEASE = {
-  title:   "Cafe Saint-Machine",
-  eyebrow: "New single",
-  tagline: "Morning coffee with the machines, somewhere past the Singularity.",
-  date:    "Out everywhere now",
-  motto:   "Coffee • croissants • Singularity News",
-  artwork: "assets/cafe-saint-machine.jpg",
-  listen:  "https://distrokid.com/hyperfollow/adaku1/cafe-saint-machine",
-  listenLabel: "Listen everywhere",
-  explore: "releases.html"
+  title:   "Deconstruct the Moon",
+  eyebrow: "New single · Out October 8",
+  tagline: "Welcome to the Sea of Tranquility. Sponsored by Venture Capital.",
+  date:    "Pop the cork — we're out of air anyway.",
+  motto:   "Gold visors • Zero-G champagne • Party on the Moon",
+  artwork: "assets/deconstruct-the-moon.jpg",
+  listen:  "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon",
+  listenLabel: "Pre-save now",
+  explore: "releases.html",
+  /* countdown shown in the hero until this moment, then it hides itself.
+     Delete the line to turn the countdown off. */
+  countdownTo: "2026-10-08T00:00:00"
+};
+
+/* Home-page campaign band under the hero. Delete this whole block
+   (or set it to null) to remove the band. */
+window.ADAKU_CAMPAIGN = {
+  ticker: [
+    "Ain't nobody died from a little digging",
+    "We gonna party on the Moon tonight",
+    "Crush the rock! Sell the dust!",
+    "Champagne floating in zero-G",
+    "Three! Two! One! Drop it!",
+    "Keep dancing, sweetie"
+  ],
+  kicker:  "Mission briefing · Deconstruct the Moon",
+  quote:   "Ain't nobody died from a little digging!",
+  text:    "A 1920s gramophone, a gold-visor billionaire, an electro-house drop and a dance club ten miles under the lunar crust. ADAKU's new single is a high-energy satire for the age of space tycoons — trademark the relics, livestream the dig, and keep the champagne floating.",
+  briefing: [
+    ["Location",   "Sea of Tranquility"],
+    ["Sponsor",    "Venture Capital"],
+    ["Dress code", "Gold visor, Balenciaga boots"],
+    ["Discovery",  "Alien pharaohs, frozen in stone"],
+    ["Oxygen",     "12%"]
+  ],
+  status:  "Keep dancing, sweetie.",
+  cta:     "Pre-save Deconstruct the Moon",
+  link:    "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon"
 };
 
 window.ADAKU_RELEASES = [

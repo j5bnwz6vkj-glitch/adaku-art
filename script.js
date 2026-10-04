@@ -17,6 +17,8 @@
     var fListen = document.getElementById('featuredReleaseListen');
     var fExplore = document.getElementById('featuredReleaseExplore');
     if (fTitle && FEATURED.title) fTitle.textContent = FEATURED.title;
+    /* long single words (e.g. DECONSTRUCT) get a smaller size so they don't run into the artwork */
+    if (fTitle && FEATURED.title && Math.max.apply(null, FEATURED.title.split(/\s+/).map(function (w) { return w.length; })) > 9) fTitle.classList.add('long-title');
     if (fEye && FEATURED.eyebrow) fEye.textContent = FEATURED.eyebrow;
     if (fTag && FEATURED.tagline) fTag.textContent = FEATURED.tagline;
     if (fDate && FEATURED.date) fDate.textContent = FEATURED.date;
@@ -24,6 +26,25 @@
     if (fListen && FEATURED.listen) fListen.href = FEATURED.listen;
     if (fListen && FEATURED.listenLabel && fListen.firstChild) fListen.firstChild.nodeValue = FEATURED.listenLabel + ' ';
     if (fExplore && FEATURED.explore) fExplore.href = FEATURED.explore;
+    var fGlow = document.querySelector('.release-glow');
+    if (fGlow && FEATURED.artwork) fGlow.style.backgroundImage = 'linear-gradient(90deg,#07101d 0%,rgba(7,16,29,.28) 18%,rgba(7,16,29,.05) 50%),url("' + FEATURED.artwork + '")';
+    var fCount = document.getElementById('featuredCountdown');
+    if (fCount && FEATURED.countdownTo) {
+      var target = new Date(FEATURED.countdownTo).getTime();
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      var tick = function () {
+        var left = target - Date.now();
+        if (!(left > 0)) { fCount.hidden = true; return false; }
+        var d = Math.floor(left / 864e5), hh = Math.floor(left / 36e5) % 24,
+            mm = Math.floor(left / 6e4) % 60, ss = Math.floor(left / 1e3) % 60;
+        fCount.innerHTML = '<span class="cd-label">T-minus</span>' +
+          [[d, 'days'], [hh, 'hrs'], [mm, 'min'], [ss, 'sec']].map(function (u) {
+            return '<span class="cd-unit"><b>' + pad(u[0]) + '</b><small>' + u[1] + '</small></span>';
+          }).join('');
+        fCount.hidden = false; return true;
+      };
+      if (tick()) { var cdTimer = setInterval(function () { if (!tick()) clearInterval(cdTimer); }, 1000); }
+    }
     var fMotto = document.getElementById('featuredReleaseMotto');
     if (fMotto && FEATURED.motto) {
       fMotto.innerHTML = String(FEATURED.motto).split('•').map(function (w) { return esc(w.trim()); }).join(' <i>•</i> ');
@@ -69,6 +90,31 @@
              ? '<span class="btn soon" aria-disabled="true">Coming soon</span>'
              : '<a class="btn fill" href="' + esc(r.listen) + '" target="_blank" rel="noopener">Listen</a>') +
            lyr + '</div></article>';
+  }
+
+  /* ---- home campaign band (window.ADAKU_CAMPAIGN in catalogue.js) ---- */
+  var CAMPAIGN = window.ADAKU_CAMPAIGN || null;
+  var campEl = document.getElementById('campaign');
+  if (campEl && CAMPAIGN) {
+    var lines = (CAMPAIGN.ticker || []).map(function (t) { return '<span>' + esc(t) + '</span><i>✦</i>'; }).join('');
+    var brief = (CAMPAIGN.briefing || []).map(function (r) {
+      var isO2 = /oxygen/i.test(r[0]);
+      return '<li' + (isO2 ? ' class="o2"' : '') + '><span>' + esc(r[0]) + '</span><b>' + esc(r[1]) + '</b>' +
+        (isO2 ? '<em class="o2-bar"><i style="width:' + (parseInt(r[1], 10) || 12) + '%"></i></em>' : '') + '</li>';
+    }).join('');
+    campEl.innerHTML =
+      (lines ? '<div class="camp-ticker" aria-hidden="true"><div class="camp-run">' + lines + lines + '</div></div>' : '') +
+      '<div class="wrap camp-inner">' +
+        '<div class="camp-copy">' +
+          (CAMPAIGN.kicker ? '<p class="camp-kicker">' + esc(CAMPAIGN.kicker) + '</p>' : '') +
+          (CAMPAIGN.quote ? '<h2 class="camp-quote">' + esc(CAMPAIGN.quote) + '</h2>' : '') +
+          (CAMPAIGN.text ? '<p class="camp-text">' + esc(CAMPAIGN.text) + '</p>' : '') +
+          (CAMPAIGN.link ? '<a class="btn camp-cta" href="' + esc(CAMPAIGN.link) + '" target="_blank" rel="noopener">' + esc(CAMPAIGN.cta || 'Listen') + ' <svg width="18" height="8" viewBox="0 0 18 8" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 4h16M12 1l4 3-4 3"/></svg></a>' : '') +
+        '</div>' +
+        (brief ? '<div class="camp-panel"><p class="camp-panel-head"><span class="dot"></span>Lunar club · live status</p><ul>' + brief + '</ul>' +
+          (CAMPAIGN.status ? '<p class="camp-status">' + esc(CAMPAIGN.status) + '</p>' : '') + '</div>' : '') +
+      '</div>';
+    campEl.hidden = false;
   }
 
   /* ---- home rail: the first five releases ---- */
