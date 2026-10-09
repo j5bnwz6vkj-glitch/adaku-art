@@ -16,13 +16,13 @@ window.ADAKU_VIDEO = {
 /* Featured release — update this block for the next launch. */
 window.ADAKU_FEATURED_RELEASE = {
   title:   "Deconstruct the Moon",
-  eyebrow: "New single · Out October 8",
+  eyebrow: "New single · Out now",
   tagline: "Welcome to the Sea of Tranquility. Sponsored by Venture Capital.",
   date:    "Pop the cork — we're out of air anyway.",
   motto:   "Gold visors • Zero-G champagne • Party on the Moon",
   artwork: "assets/deconstruct-the-moon.jpg",
   listen:  "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon",
-  listenLabel: "Pre-save now",
+  listenLabel: "Listen now",
   explore: "releases.html",
   /* countdown shown in the hero until this moment, then it hides itself.
      Delete the line to turn the countdown off. */
@@ -51,7 +51,7 @@ window.ADAKU_CAMPAIGN = {
     ["Oxygen",     "12%"]
   ],
   status:  "Keep dancing, sweetie.",
-  cta:     "Pre-save Deconstruct the Moon",
+  cta:     "Listen to Deconstruct the Moon",
   link:    "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon"
 };
 
@@ -60,15 +60,13 @@ window.ADAKU_RELEASES = [
     title:  "Deconstruct the Moon",
     type:   "Single",
     cover:  "assets/deconstruct-the-moon.jpg",
-    listen: "",
-    soon:   true
+    listen: "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon"
   },
   {
     title:  "Cyberconsciousness",
     type:   "Single",
     cover:  "assets/cyberconsciousness.jpg",
-    listen: "",
-    soon:   true
+    listen: "https://distrokid.com/hyperfollow/adaku1/cyberconsciousness"
   },
   {
     title:  "Cafe Saint-Machine",
