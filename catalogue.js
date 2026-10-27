@@ -57,6 +57,13 @@ window.ADAKU_CAMPAIGN = {
 
 window.ADAKU_RELEASES = [
   {
+    title:  "Prompt Your Things",
+    type:   "Single",
+    cover:  "assets/prompt-your-things.jpg",
+    soon:   true,
+    listen: ""
+  },
+  {
     title:  "Moral-Neural Police",
     type:   "Single",
     cover:  "assets/moral-neural-police.jpg",
