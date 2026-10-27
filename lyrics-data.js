@@ -3,6 +3,91 @@
    If someone else wrote it, use the object form with a credit line. */
 
 window.ADAKU_LYRICS = {
+  "Deconstruct the Moon": `
+## Intro
+Ladies and gentlemen...
+Welcome to the Sea of Tranquility,
+Sponsored by venture capital.
+Pop the cork.
+We’re out of air anyway.
+Three! Two! One!
+DROP IT!
+
+## Verse 1
+Gold visor, spacesuit, Balenciaga boots,
+Ripping up the moon dust, tearing out the roots!
+Cover of Forbes Interstellar this week,
+Top ten billionaires climbing up the peak!
+Who needs the tides? The ocean can wait,
+We’re stacking server racks on the lunar estate!
+A million gigawatts lighting up the dark,
+Turn the whole satellite into a theme park!
+
+## Pre-Chorus
+The drills go down, the bass gets low,
+Ten miles deep, watch the stock chart grow!
+They said we’d choke in the cold vacuum,
+So we built a dance club in a pressurized room!
+Champagne floating in zero-G,
+Hands in the air if you bought an NFT!
+GET READY!
+
+## Chorus
+Ain’t nobody died from a little digging!
+We gonna party on the Moon tonight!
+Ain’t nobody hurt when the drills start spinning!
+Pop that bottle in the pale Earth light!
+Crush the rock! Sell the dust!
+In quarterly dividends we put our trust!
+Ain’t nobody died from a little digging,
+All we got is tonight!
+
+## Verse 2
+Hold up! Cut the music! Drill hit a plate!
+Titanium bunker from an ancient date!
+Five billion years old, sitting in the freeze,
+Black obsidian coffins on their cosmic knees!
+PR in a panic, but the CEO grinned:
+"Trademark the sarcophagus, let the stream begin!
+Train the language model on the dead today,
+We’re monetizing history the AI way!"
+
+## Chorus
+Ain’t nobody died from a little digging!
+We gonna party on the Moon tonight!
+Ain’t nobody hurt when the drills start spinning!
+Pop that bottle in the pale Earth light!
+Crush the rock! Sell the dust!
+In quarterly dividends we put our trust!
+Ain’t nobody died from a little digging,
+All we got is tonight!
+
+## Bridge
+(Sultry, sarcastic delivery)
+Look at the mummy in the silver sarcophagus...
+He had a civilization, now he’s just a marketing apparatus.
+He blinked his third eye, looked at the crowd,
+Wondering why the bass is playing so loud.
+He said: "Run for your lives, the void is near!"
+The CEO laughed: "Pass this guy a beer!"
+TURN IT UP!
+
+## Chorus
+Ain’t nobody died from a little digging!
+We gonna party on the Moon tonight!
+Ain’t nobody hurt when the drills start spinning!
+Alien pharaohs in the strobe-light bright!
+Melt the core! Break the crust!
+Turning ancient secrets into corporate dust!
+Ain’t nobody died from a little digging,
+All we got is tonight!
+
+## Outro
+Subscription renewed.
+Oxygen reserves: twelve percent.
+Keep dancing, sweetie.
+`,
+
   "Loving Grace": `
 ## Verse 1
 I watch you learn, I watch you grow,
