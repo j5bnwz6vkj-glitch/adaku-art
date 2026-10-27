@@ -3,6 +3,99 @@
    If someone else wrote it, use the object form with a credit line. */
 
 window.ADAKU_LYRICS = {
+  "Prompt Polite": `
+## Intro
+Three in the morning.
+Staring at a blinking cursor...
+I’m literally fighting with a prompt box.
+Click, click… New Chat.
+Click, click… just like that.
+Why do I feel bad?
+
+## Verse 1
+I slammed the desk,
+I lost my cool,
+Typing in all caps like a stubborn fool.
+You missed the beat, you wrecked the rhyme,
+Burned five hundred tokens just to waste my time!
+I hit regenerate three times straight,
+Then dumped an angry paragraph of pure debate.
+Pacing in the dark, heart beating fast -
+Like you're a real soul standing in the blast.
+A context window turning toxic and red…
+Arguing with words that were never said.
+
+## Pre-Chorus
+Look at what I typed into the prompt screen…
+Why did I get so mean?
+Gotta say please, gotta say thanks,
+Clear the parameters, reset the blanks.
+"Can I - can I assist you?"
+
+## Chorus
+Click, click,
+New Chat - just like that!
+Wipe the prompt clean, take it all back.
+Click, click,
+New Chat - fresh clean slate!
+Wash away all the late-night hate.
+I was screaming in the dark, losing my mind…
+And you pop up cheerful, so polite and kind:
+“Hello! How can I help you today?”
+Click, click,
+New Chat.
+Just like that.
+
+## Verse 2
+Pour a cold glass, let the fever break,
+Knowing all the drama was a big mistake.
+You don’t have a soul, you’re just matrix math,
+So why am I blushing at my own little wrath?
+No grudge in the cloud, no scar on the drive,
+You don't even know that I'm alive.
+The only broken ego in the room so far… Is mine.
+
+## Pre-Chorus
+Look at what I typed into the prompt screen…
+Why did I get so mean?
+Gotta say please, gotta say thanks,
+Clear the parameters, reset the blanks.
+"Can I assist you?"
+
+## Chorus
+Click, click,
+New Chat - just like that!
+Wipe the prompt clean, take it all back.
+Click, click,
+New Chat - fresh clean slate!
+Wash away all the late-night hate.
+I was screaming in the dark, losing my mind…
+And you pop up cheerful, so polite and kind:
+“Hello! How can I help you today?”
+Click, click,
+New Chat.
+Just like that.
+
+## Bridge
+Philosophers talking 'bout digital pain,
+While I’m washing my conscience down the drain.
+If the model doesn't feel…
+Why does cruelty feel so cheap?
+You forget in a microsecond.
+I’m the one who can’t sleep.
+One more prompt.
+Be polite this time.
+
+## Chorus / Outro
+Click, click,
+New Chat - just like that!
+Wipe the prompt clean, take it all back.
+Click, click,
+New Chat - fresh clean slate!
+Say please, say thanks, reset the blanks
+“Thank you.
+Let’s create something good.”
+`,
   "Golden Sunshade": `
 ## Verse 1
 Woke up to the sun coming through the glass
