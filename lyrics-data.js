@@ -3,6 +3,61 @@
    If someone else wrote it, use the object form with a credit line. */
 
 window.ADAKU_LYRICS = {
+  "Better Off Sliced": `
+## Verse 1
+Tuesday morning on the kitchen counter,
+I spotted a peach that was sweet and browner.
+Rubbed my little front legs, took a sip of the dew,
+Planning typical things that a Drosophila do.
+Then zap! Came the tweezers, cold and bright,
+A lab coat whispered, “We’re prepping tonight.”
+They fixed me in resin, they cut me in strips,
+And now my whole life is a series of chips!
+
+## Chorus
+Forty nanometers! Slice by slice!
+My private mind is a storage device!
+A hundred petabytes just to show
+Which way my tiny little dendrites go!
+I was only hungry for a bruised banana,
+Now I’m open-source data in a cloud cabana!
+
+## Verse 2
+Now look at you humans, staring at screens,
+Tracing my axons with neural machines.
+You get turned around in an IKEA store,
+Dropping your phones on the showroom floor!
+Meanwhile, look at my central complex:
+Ellipsoid body, totally flex!
+I’ve got a ring attractor built in my brain,
+A living donut in the dark and rain!
+The bump of activity turns when I spin—
+Zero Wi-Fi, and I always win!
+
+## Chorus
+Forty nanometers! Slice by slice!
+My private mind is a storage device!
+A hundred petabytes just to show
+Which way my tiny little dendrites go!
+I was only hungry for a bruised banana,
+Now I’m open-source data in a cloud cabana!
+
+## Chorus
+Forty nanometers! Slice by slice!
+My private mind is a storage device!
+A hundred petabytes just to show
+Which way my tiny little dendrites go!
+I was only hungry for a bruised banana,
+Now I’m open-source data in a cloud cabana!
+
+## Outro
+One hundred and forty thousand neurons on display…
+Check the heading vector, I’m flying away!
+Wait… which server rack am I on?
+Is anyone gonna feed this digital mesh a grape?
+Hello? Google?
+`,
+
   "Cafe Saint-Machine": `
 ## Intro
 Bonjour...
