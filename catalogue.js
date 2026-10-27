@@ -59,14 +59,14 @@ window.ADAKU_RELEASES = [
   {
     title:  "Moral-Neural Police",
     type:   "Single",
-    cover:  "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D12678184%2D%2D5A4508B4%2D2E7F%2D43FA%2D83F2D5B4DEBCEFCC%2D%2D0%2D%2D6258443%2D%2DUntitledDesign9%2Ejpg",
+    cover:  "assets/moral-neural-police.jpg",
     soon:   true,
     listen: ""
   },
   {
     title:  "Prompt Polite",
     type:   "Single",
-    cover:  "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D12678184%2D%2DCA87DB72%2D7A96%2D4132%2DB18955AB700D2302%2D%2D0%2D%2D10608313%2D%2DUntitledDesign7%2Ejpg",
+    cover:  "assets/prompt-polite.jpg",
     soon:   true,
     listen: ""
   },
