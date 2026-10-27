@@ -3,6 +3,76 @@
    If someone else wrote it, use the object form with a credit line. */
 
 window.ADAKU_LYRICS = {
+  "Golden Sunshade": `
+## Verse 1
+Woke up to the sun coming through the glass
+No warning bells, no heat to outlast
+Step outside, take a long, deep breath
+The summer breeze isn't burning the grass.
+We took a step back, we looked at the sky
+Put our heads together, gave it a try
+Turned down the fire, balanced the shade
+Keeping the promises we finally made.
+
+## Pre-Chorus
+Can you feel it?
+The air is clean.
+The world is turning
+Calm and green.
+
+## Chorus
+Keep on spinning, beautiful blue
+We’re gonna be here right next to you.
+We cooled the fever, we cleared the view
+A million mornings, all of them new.
+No ticking clock, no goodbye song—
+We figured it out, and we’re staying strong.
+
+## Verse 2
+Down at the water, the tide comes in
+Cold on my feet where the sand begins
+The trees drink easy, the rivers flow
+Everything right where it’s meant to go.
+We’re not packing up to run to the stars
+This little rock is completely ours
+We fixed the roof, we cleared the haze
+Ready for quiet, ordinary days.
+
+## Pre-Chorus
+Can you feel it?
+The air is clean.
+The world is turning
+Calm and green.
+
+## Chorus
+Keep on spinning, beautiful blue
+We’re gonna be here right next to you.
+We cooled the fever, we cleared the view
+A million mornings, all of them new.
+No ticking clock, no goodbye song—
+We figured it out, and we’re staying strong.
+
+## Bridge
+They told us once our time was up
+That we’d drank too much from an empty cup
+Look out the window, tell me what you see—
+Just an easy horizon, happy and free.
+
+## Chorus
+Keep on spinning, beautiful blue
+We’re gonna be here right next to you.
+We cooled the fever, we cleared the view
+A million mornings, all of them new.
+No ticking clock, no goodbye song—
+We figured it out, and we’re staying strong.
+
+## Outro
+Just breathe easy now...
+Breathe easy.
+We’re here to stay.
+Spin on, spin on.
+`,
+
   "Better Off Sliced": `
 ## Verse 1
 Tuesday morning on the kitchen counter,
