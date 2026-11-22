@@ -1,10 +1,43 @@
-/* Featured video — the one shown on the home page.
-   Swap the id and title when a new video is out. */
+/* Featured video — the one shown in the big player on the home page.
+   Swap the id and title when a new video is out. The id is the part
+   after "watch?v=" in the YouTube link. */
 window.ADAKU_VIDEO = {
-  id:      "Vk2JzZCvAxc",
-  title:   "NeuraLinked",
-  caption: "Official music video"
+  id:      "-jLGisjtUxQ",
+  title:   "Deconstruct the Moon",
+  caption: "Official video"
 };
+
+/* Video row under the player — click a thumbnail to play it.
+   Newest first. Add a line here whenever a new video goes up. */
+window.ADAKU_VIDEOS = [
+  { id: "-jLGisjtUxQ", title: "Deconstruct the Moon" },
+  { id: "mKPQ8PD_-g8", title: "Golden Sunshade" },
+  { id: "Vk2JzZCvAxc", title: "NeuraLinked" },
+  { id: "VM-HmrsH0y4", title: "SIM_Ancestor" },
+  { id: "Xr6O9aYr8sk", title: "Lord of the Mist" },
+  { id: "CM1MmgRfCN0", title: "Burn the Old Letters" }
+];
+
+/* "Latest" news strip on the home page (the News link in the menu).
+   Newest first; keep it to about four items. link is optional. */
+window.ADAKU_NEWS = [
+  { kicker: "New video",
+    title:  "Deconstruct the Moon — the official video",
+    text:   "Gold visors, zero-G champagne and a dance club under the lunar crust. Watch it now on YouTube.",
+    link:   "https://www.youtube.com/watch?v=-jLGisjtUxQ", linkLabel: "Watch" },
+  { kicker: "Out now",
+    title:  "Anti-Matter & Atom à la Mode",
+    text:   "Two new ADAKU singles, streaming everywhere now.",
+    link:   "releases.html", linkLabel: "Listen" },
+  { kicker: "Out now",
+    title:  "Moral-Neural Police, Prompt Your Things & Prompt Polite",
+    text:   "Three new transmissions from the age of prompts and machines.",
+    link:   "releases.html", linkLabel: "Listen" },
+  { kicker: "Coming soon",
+    title:  "Infinite Recurse",
+    text:   "The next ADAKU single. Pre-save it now and it lands in your library on release day.",
+    link:   "https://distrokid.com/hyperfollow/adaku1/infinite-recurse", linkLabel: "Pre-save" }
+];
 
 /* ADAKU catalogue — edit this file to change the site.
    One block per release. Order here = order on the site;
@@ -16,7 +49,7 @@ window.ADAKU_VIDEO = {
 /* Featured release — update this block for the next launch. */
 window.ADAKU_FEATURED_RELEASE = {
   title:   "Deconstruct the Moon",
-  eyebrow: "New single · Out now",
+  eyebrow: "New video · Out now",
   tagline: "Welcome to the Sea of Tranquility. Sponsored by Venture Capital.",
   date:    "Pop the cork — we're out of air anyway.",
   motto:   "Gold visors • Zero-G champagne • Party on the Moon",
@@ -24,9 +57,14 @@ window.ADAKU_FEATURED_RELEASE = {
   listen:  "https://distrokid.com/hyperfollow/adaku1/deconstruct-the-moon",
   listenLabel: "Listen now",
   explore: "releases.html",
-  /* countdown shown in the hero until this moment, then it hides itself.
-     Delete the line to turn the countdown off. */
-  countdownTo: "2026-10-08T00:00:00"
+  /* Looping video behind the hero (silent). The site first tries the
+     video file in assets/; if that file isn't there it falls back to the
+     YouTube video below. Delete both lines to go back to the still artwork.
+     (To bring back a launch countdown, add e.g.
+     countdownTo: "2026-12-01T00:00:00") */
+  loop:        "assets/deconstruct-the-moon-loop.mp4",
+  loopYouTube: "-jLGisjtUxQ",
+  watchLabel:  "Watch the video"
 };
 
 /* Home-page campaign band under the hero. Delete this whole block
@@ -57,25 +95,41 @@ window.ADAKU_CAMPAIGN = {
 
 window.ADAKU_RELEASES = [
   {
+    title:  "Infinite Recurse",
+    type:   "Single",
+    cover:  "assets/infinite-recurse.jpg",
+    soon:   true,
+    listen: ""
+  },
+  {
+    title:  "Anti-Matter",
+    type:   "Single",
+    cover:  "https://i.scdn.co/image/ab67616d0000b2730c4b439269601df0b4973eac",
+    listen: "https://distrokid.com/hyperfollow/adaku1/anit-matter"
+  },
+  {
+    title:  "Atom à la Mode",
+    type:   "Single",
+    cover:  "https://i.scdn.co/image/ab67616d0000b2731b6d2a1ea21eaad9e0be94ee",
+    listen: "https://distrokid.com/hyperfollow/adaku1/atom--la-mode"
+  },
+  {
     title:  "Prompt Your Things",
     type:   "Single",
     cover:  "assets/prompt-your-things.jpg",
-    soon:   true,
-    listen: ""
+    listen: "https://distrokid.com/hyperfollow/adaku1/prompt-your-things"
   },
   {
     title:  "Moral-Neural Police",
     type:   "Single",
     cover:  "assets/moral-neural-police.jpg",
-    soon:   true,
-    listen: ""
+    listen: "https://distrokid.com/hyperfollow/adaku1/moral-neural-police"
   },
   {
     title:  "Prompt Polite",
     type:   "Single",
     cover:  "assets/prompt-polite.jpg",
-    soon:   true,
-    listen: ""
+    listen: "https://distrokid.com/hyperfollow/adaku1/prompt-polite"
   },
   {
     title:  "Deconstruct the Moon",

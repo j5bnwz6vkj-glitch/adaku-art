@@ -51,6 +51,67 @@
     }
   }
 
+  /* ---- looping silent video behind the hero (loop / loopYouTube in catalogue.js) ---- */
+  var heroSec = document.querySelector('.release-hero');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroSec && FEATURED && (FEATURED.loop || FEATURED.loopYouTube) && !reduceMotion) {
+    var layer = document.createElement('div');
+    layer.className = 'hero-loop';
+    layer.setAttribute('aria-hidden', 'true');
+    heroSec.insertBefore(layer, heroSec.firstChild);
+    var sizeLoop = function () { layer.style.setProperty('--loop-h', layer.offsetHeight + 'px'); };
+    sizeLoop();
+    window.addEventListener('resize', sizeLoop);
+    var giveUp = function () { layer.remove(); heroSec.classList.remove('loop-on'); };
+    /* the cover art stays up until the loop is actually playing */
+    var goLive = function () {
+      if (heroSec.classList.contains('loop-on')) return;
+      heroSec.classList.add('loop-on');
+      layer.classList.add('is-playing');
+      sizeLoop();
+    };
+    var useYouTube = function () {
+      var id = FEATURED.loopYouTube;
+      if (!id) { giveUp(); return; }
+      var slot = document.createElement('div');
+      layer.appendChild(slot);
+      layer.classList.add('is-yt');
+      var build = function () {
+        new window.YT.Player(slot, {
+          videoId: id,
+          host: 'https://www.youtube-nocookie.com',
+          playerVars: { autoplay: 1, mute: 1, loop: 1, playlist: id, controls: 0, playsinline: 1,
+                        rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0 },
+          events: {
+            onReady: function (e) { e.target.mute(); e.target.playVideo(); var f = e.target.getIframe(); f.tabIndex = -1; f.title = ''; },
+            /* 1 = playing; a short delay lets YouTube's title overlay clear first */
+            onStateChange: function (e) { if (e.data === 1) setTimeout(goLive, 1500); else if (e.data === 0) e.target.playVideo(); }
+          }
+        });
+      };
+      if (window.YT && window.YT.Player) { build(); return; }
+      var prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function () { if (prev) prev(); build(); };
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      tag.onerror = giveUp;
+      document.head.appendChild(tag);
+    };
+    if (FEATURED.loop) {
+      var hv = document.createElement('video');
+      hv.muted = true; hv.loop = true; hv.autoplay = true; hv.playsInline = true;
+      hv.setAttribute('muted', ''); hv.setAttribute('playsinline', ''); hv.setAttribute('preload', 'auto');
+      hv.addEventListener('playing', goLive);
+      hv.addEventListener('error', function () { hv.remove(); useYouTube(); });
+      hv.src = FEATURED.loop;
+      layer.appendChild(hv);
+      var hp = hv.play();
+      if (hp && hp.catch) hp.catch(function () {});
+    } else {
+      useYouTube();
+    }
+  }
+
   function slug(t) {
     return String(t).toLowerCase().replace(/&/g, 'and')
       .replace(/['’`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -190,36 +251,103 @@
     if (start) show(start.title);
   }
 
-  /* ---- featured video: poster upgrades to an inline player on click ---- */
+  /* ---- "Latest" news strip (window.ADAKU_NEWS in catalogue.js) ---- */
+  var NEWS = window.ADAKU_NEWS || [];
+  var newsSec = document.getElementById('news');
+  var newsGrid = document.getElementById('newsGrid');
+  if (newsSec && newsGrid && NEWS.length) {
+    newsGrid.innerHTML = NEWS.map(function (n) {
+      var ext = n.link && /^https?:/.test(n.link);
+      return '<article class="news-item">' +
+        (n.kicker ? '<p class="news-kicker">' + esc(n.kicker) + '</p>' : '') +
+        '<h3>' + esc(n.title || '') + '</h3>' +
+        (n.text ? '<p class="news-text">' + esc(n.text) + '</p>' : '') +
+        (n.link ? '<a class="news-link" href="' + esc(n.link) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' +
+          esc(n.linkLabel || 'More') + ' <svg width="18" height="8" viewBox="0 0 18 8" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 4h16M12 1l4 3-4 3"/></svg></a>' : '') +
+        '</article>';
+    }).join('');
+    newsSec.hidden = false;
+  } else {
+    /* no news: drop the menu link so it never points at nothing */
+    var newsLink = document.querySelector('#navlinks a[href$="#news"]');
+    if (newsLink && !newsSec) newsLink.remove();
+  }
+
+  /* ---- featured video player + thumbnail row ---- */
   var VIDEO = window.ADAKU_VIDEO;
+  var VIDEOS = window.ADAKU_VIDEOS || [];
   var film = document.querySelector('.filmcard');
   if (film && VIDEO && VIDEO.id) {
+    var current = VIDEO;
     var link = film.querySelector('a');
     var cap  = document.getElementById('filmCap');
-    if (link) link.href = 'https://www.youtube.com/watch?v=' + VIDEO.id;
     var fb = document.getElementById('ytFallback');
-    if (fb) fb.href = 'https://www.youtube.com/watch?v=' + VIDEO.id;
-    if (cap && VIDEO.title) {
-      cap.textContent = VIDEO.title + (VIDEO.caption ? ' \u2014 ' + VIDEO.caption : '');
-    }
+    var poster = film.querySelector('img');
+    var watchUrl = function (id) { return 'https://www.youtube.com/watch?v=' + id; };
+    var thumb = function (id, size) { return 'https://i.ytimg.com/vi/' + id + '/' + size + '.jpg'; };
+    var setVideo = function (v) {
+      current = v;
+      if (link) link.href = watchUrl(v.id);
+      if (fb) fb.href = watchUrl(v.id);
+      if (cap && v.title) cap.textContent = v.title + (v.caption ? ' \u2014 ' + v.caption : '');
+      if (poster) {
+        poster.onerror = function () { poster.onerror = null; poster.src = thumb(v.id, 'hqdefault'); };
+        poster.src = v.poster || thumb(v.id, 'maxresdefault');
+        poster.alt = (v.title || 'ADAKU') + ' video still';
+      }
+    };
+    setVideo(VIDEO);
     var play = function (e) {
       if (e) e.preventDefault();
-      if (film.querySelector('iframe')) return;
-      var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO.id + '?autoplay=1&rel=0';
-      f.title = VIDEO.title || 'ADAKU video';
-      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
-      f.allowFullscreen = true;
-      film.innerHTML = '';
-      film.appendChild(f);
+      var f = film.querySelector('iframe');
+      var src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(current.id) + '?autoplay=1&rel=0';
+      if (!f) {
+        f = document.createElement('iframe');
+        f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+        f.allowFullscreen = true;
+        if (link) link.hidden = true;
+        film.appendChild(f);
+      }
+      f.title = current.title || 'ADAKU video';
+      f.src = src;
     };
     if (link) link.addEventListener('click', play);
+
+    var row = document.getElementById('videoRow');
+    if (row && VIDEOS.length > 1) {
+      row.innerHTML = VIDEOS.map(function (v, i) {
+        return '<button type="button" class="vid-thumb" data-i="' + i + '"' +
+          (v.id === VIDEO.id ? ' aria-current="true"' : '') + '>' +
+          '<span class="vid-img"><img src="' + thumb(v.id, 'mqdefault') + '" alt="" loading="lazy"></span>' +
+          '<span class="vid-title">' + esc(v.title) + '</span></button>';
+      }).join('');
+      row.hidden = false;
+      row.addEventListener('click', function (e) {
+        var b = e.target.closest('.vid-thumb');
+        if (!b) return;
+        var v = VIDEOS[Number(b.dataset.i)];
+        Array.prototype.forEach.call(row.children, function (c) { c.removeAttribute('aria-current'); });
+        b.setAttribute('aria-current', 'true');
+        setVideo(v);
+        play();
+      });
+    }
+
     var watch = document.getElementById('watchLatest');
-    if (watch) watch.addEventListener('click', function (e) {
-      e.preventDefault();
-      film.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(play, 450);
-    });
+    if (watch) {
+      if (FEATURED && FEATURED.watchLabel) watch.lastChild.nodeValue = FEATURED.watchLabel;
+      watch.hidden = false;
+      watch.addEventListener('click', function (e) {
+        e.preventDefault();
+        setVideo(VIDEO);
+        if (row) Array.prototype.forEach.call(row.children, function (c) {
+          if (VIDEOS[Number(c.dataset.i)] && VIDEOS[Number(c.dataset.i)].id === VIDEO.id) c.setAttribute('aria-current', 'true');
+          else c.removeAttribute('aria-current');
+        });
+        film.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        setTimeout(play, 450);
+      });
+    }
   }
 
   /* ---- mobile navigation ---- */
