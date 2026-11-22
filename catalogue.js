@@ -42,8 +42,9 @@ window.ADAKU_NEWS = [
 /* ADAKU catalogue — edit this file to change the site.
    One block per release. Order here = order on the site;
    the first five appear on the home page.
-   Upcoming song? Add soon: true and leave listen empty — the card
-   shows "Coming soon". When it is out, paste the link and delete soon. */
+   Upcoming song? Add soon: true. Leave listen empty for a plain
+   "Coming soon" card, or paste the DistroKid pre-save link to show a
+   "Pre-save" button. When it is out, delete soon. */
 
 
 /* Featured release — update this block for the next launch. */
@@ -99,7 +100,7 @@ window.ADAKU_RELEASES = [
     type:   "Single",
     cover:  "assets/infinite-recurse.jpg",
     soon:   true,
-    listen: ""
+    listen: "https://distrokid.com/hyperfollow/adaku1/infinite-recurse"
   },
   {
     title:  "Anti-Matter",

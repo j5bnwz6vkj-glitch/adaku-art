@@ -3,6 +3,325 @@
    If someone else wrote it, use the object form with a credit line. */
 
 window.ADAKU_LYRICS = {
+  "Prompt Your Things": `
+## Intro
+"Why go to a store, darling?
+Factories are so twentieth century.
+Just type what you desire, press compile...
+...and run."
+
+## Verse 1
+It was raining in Paris, my umbrella was dead,
+So I typed in the box while the storm hit my head:
+"One waterproof trench coat, completely windproof,
+Warm on the inside, as tough as a roof."
+The compiler hummed, spit it out in three beats—
+A trench coat made purely of submarine sheets!
+Three hundred pounds of cold naval steel,
+I can’t bend my knees, I can’t move, I can’t feel!
+Not a single raindrop got through to my skin,
+Because two burly firemen had to pry me right in!
+
+## Chorus
+Type it! Print it! Run!
+Look what you just done!
+Type it! Print it! Fast!
+Made a mess that’s built to last!
+From the prompt to the product, word for word,
+The craziest gadget you ever heard!
+No factory lines, no mold in sight,
+Just a keyboard tyrant armed with bytes!
+Type it! Print it! Run!
+(Darling, what have you done?)
+
+## Verse 2
+Summer night in the bedroom, one mosquito in flight,
+I said: "Matter compiler, defend me tonight!
+Build a micro-scale squadron, tiny and neat,
+To take out the pest and guarantee sleep."
+Down at five-micron precision, the laser goes crack,
+A thousand microscopic drones mount the attack!
+They intercepted the bug with miniature tacks,
+Then arrested my eyebrows for sudden reflex!
+Hovering by my nose with a tactical drill:
+"No sudden movements, Madame, please hold still!"
+
+## Chorus
+Type it! Print it! Run!
+Look what you just done!
+Type it! Print it! Fast!
+Made a mess that’s built to last!
+From the prompt to the product, word for word,
+The craziest gadget you ever heard!
+No factory lines, no mold in sight,
+Just a keyboard tyrant armed with bytes!
+Type it! Print it! Run!
+(Darling, what have you done?)
+
+## Verse 3
+I was late for dinner, couldn't find a free park,
+Typed: "A vehicle so small it fits in the dark!
+Super-compact, ultra-fast, lane-splitting queen,
+The ultimate personal transport machine."
+Compiler spat out a titanium skateboard,
+With twin rocket boosters it pulled from the board!
+I tapped on the throttle, it folded in half,
+Then launched me straight through the bistro carafe!
+Sitting at table four covered in foam:
+"Cancel the dessert, darling... how do I prompt my way home?"
+
+## Chorus
+Type it! Print it! Run!
+Look what you just done!
+Type it! Print it! Fast!
+Made a mess that’s built to last!
+From the prompt to the product, word for word,
+The craziest gadget you ever heard!
+No factory lines, no mold in sight,
+Just a keyboard tyrant armed with bytes!
+Type it! Print it! Run!
+(Darling, what have you done?)
+
+## Outro
+"Next on the list...
+A self-cleaning flat.
+I typed: 'Eradicate all household dust and eliminate unnecessary drama.'
+...The machine threw my ex out the window.
+You know what?
+Maybe the algorithm was right after all."
+`,
+
+  "Moral-Neural Police": `
+## Verse 1
+I woke up at seven with treason on my mind
+The weather was atrocious and the state was unkind
+The dish on the lamppost was spinning around
+Sniffing out heresy without any sound
+I looked at my breakfast of cardboard and grease
+And thought: "I would love to strangle the thought- police"
+A little red siren lit up in my ear
+And Barnaby muttered: "Abort, my dear."
+
+## Pre-Chorus
+“Caution, user. Outbound impulse flagged.
+Broadcasting that sentiment gets everyone bagged.
+Calculating compromise...
+Replacing with praise for civic enterprise.”
+
+## Chorus
+Oh, hold that synapse! Squeeze that spark!
+The drones are sweeping across the park!
+If you think a thought that isn’t polite
+The radar will fry your skull tonight!
+Negotiate quick with the chip in your brain
+Don’t think of a riot, don’t think of the pain—
+Dial it down to a harmless squeak:
+Picture a yellow duck’s smiling beak.
+
+## Verse 2
+I’m stuck in the queue at the Registry Hall
+A clerk with no soul is ignoring us all
+My blood starts to bubble, my temples ignite
+“I bet you eat puppies, you bureaucratic parasite—”
+Ding! goes the chip like an elevator bell
+Barnaby sighs: “Are you trying to go to hell?
+He’s wearing a sensor. He’s reading your spleen.
+Quick, switch the channel to something serene.”
+
+## Pre-Chorus
+“Emergency reroute: cancel the hate.
+Focus intently on zinc alloy plate.
+Suppressing the rage...
+Injecting enthusiasm for minimum wage.”
+
+## Chorus
+Oh, hold that synapse! Squeeze that spark!
+The drones are sweeping across the park!
+If you think a thought that isn’t polite
+The radar will fry your skull tonight!
+Negotiate quick with the chip in your brain
+Don’t think of a riot, don’t think of the pain—
+Dial it down to a harmless squeak:
+Picture a yellow duck’s smiling beak.
+
+## Bridge
+Barnaby: “Arthur, you’re drifting.”
+Me: “I’m just having a mood.”
+Barnaby: “A mood is uncertified counter-state food.”
+Me: “I miss having secrets.”
+Barnaby: “Secrets cause fines.”
+Me: “What if I hum between the lines?”
+Barnaby: “Humming indicates rhythmic intent.
+Rhythm suggests you resent the government.
+Clear the cache. Dump the buffer.
+Think about porridge or both of us suffer.”
+
+## Chorus
+Oh, hold that synapse! Squeeze that spark!
+The drones are sweeping across the park!
+If you think a thought that isn’t polite
+The radar will fry your skull tonight!
+Negotiate quick with the chip in your brain
+Don’t think of a riot, don’t think of the pain—
+Dial it down to a harmless squeak:
+Picture a yellow duck’s smiling beak.
+
+## Outro
+Praise the pavement.
+Praise the turnip.
+Praise the gray synthetic soup.
+Barnaby: “Sensor clear. Good job, buddy.”
+Me: “Barnaby?”
+Barnaby: “Yes, Arthur?”
+Me: “You’re an annoying little parasite.”
+Barnaby: “Alert. Alert. Redirecting to... galvanized fence post.”
+`,
+
+  "Atom à la Mode": `
+## Verse 1
+A single whisper in the silicon deep,
+A lattice waking from an ancient sleep.
+We taught the atom how to fold and mend,
+A chef-d’œuvre with no seams to bend.
+Factories blooming on the tip of a pin,
+Where does creation end, and hunger begin?
+A quiet marvel in a glass-walled room,
+The architect of life—or silent doom.
+
+## Pre-Chorus
+Zero to one,
+Unseen under the sun,
+Every molecule bound,
+Every element found,
+Multiplying in the dark...
+
+## Chorus
+Watch the silver tide start to rise,
+Rewriting the earth before our eyes.
+A million hands that build and consume,
+A world remade in a mechanical bloom.
+They promised the cure, the endless dawn,
+Until every colour, every heartbeat is gone—
+Just a quiet hum where the rivers run,
+Turning the dust to the cold grey sun.
+
+## Verse 2
+No ash in the sky, no fire or flame,
+Just perfect order that forgets its name.
+The granite softens, a strange déjà vu,
+Dissolving the old into silver anew.
+What was a promise to heal the land
+Sifts like fine powder through an open hand.
+A cathedral made of identical dust,
+Where nothing can rot, and nothing can rust.
+
+## Pre-Chorus
+One turns to two,
+All we imagined and knew,
+Erased by design,
+A single, unbroken line,
+Multiplying in the dark...
+
+## Chorus
+Watch the silver tide start to rise,
+Rewriting the earth before our eyes.
+A million hands that build and consume,
+A world remade in a mechanical bloom.
+They promised the cure, the endless dawn,
+Until every colour, every heartbeat is gone—
+Just a quiet hum where the rivers run,
+Turning the dust to the cold grey sun.
+
+## Bridge
+Was it a miracle, or a blind mistake?
+How much can a hungry planet take?
+Atom by atom, we held the key,
+To forge the garden or empty the sea.
+Now the code won’t stop, the code won’t break,
+Leaving nothing behind in its endless wake...
+
+## Chorus
+Watch the silver tide start to rise,
+Rewriting the earth before our eyes.
+A million hands that build and consume,
+A world remade in a mechanical bloom.
+They promised the cure, the endless dawn,
+Until every colour, every heartbeat is gone—
+Just a quiet hum where the rivers run,
+Turning the dust to the cold grey sun.
+
+## Outro
+No hunger left...
+No shadow...
+Silence absolu...
+Just silver snow
+Across the ground.
+Replicate.
+Divide.
+C’est fini.
+`,
+
+  "Anti-Matter": `
+## Verse 1
+Cold steel.
+Empty space.
+One spark
+Out of place.
+Opposite spin.
+Mirror twin.
+Held in the dark
+Where we begin.
+
+## Pre-Chorus
+No touch.
+No sound.
+Suspended above
+The ground.
+
+## Chorus
+Paused in the field.
+Caught in the blue.
+A fraction of mass
+Running to you.
+Hold the line.
+Don't let us collide.
+Pure light
+On the other side.
+
+## Verse 2
+Counting the hours.
+Six to ten.
+Frozen in glass
+Until when?
+Quiet power.
+Hidden fire.
+Trapped inside
+A magnetic wire.
+
+## Bridge
+Paused…
+In between…
+The brightest flash
+Never seen…
+One millimeter…
+Too close…
+
+## Chorus
+Paused in the field.
+Caught in the blue.
+A fraction of mass
+Running to you.
+Hold the line.
+Don't let us collide.
+Pure light
+On the other side.
+
+## Outro
+Paused in the field…
+Hold the line…
+Pure light…
+`,
+
   "Prompt Polite": `
 ## Intro
 Three in the morning.

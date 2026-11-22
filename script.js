@@ -138,7 +138,7 @@
   function card(r, i) {
     var s = slug(r.title);
     /* a release with soon: true (or no listen link yet) shows as "Coming soon" */
-    var soon = !!r.soon || !r.listen;
+    var soon = !!r.soon || !r.listen;   /* soon + a link = pre-save */
     var lyr = hasLyrics(r.title)
       ? '<a class="btn" href="lyrics.html#' + s + '">Lyrics</a>'
       : '';
@@ -148,7 +148,9 @@
            '<h3>' + esc(r.title) + '</h3>' +
            '<p class="meta">' + esc(r.type || 'Single') + (soon ? ' · Coming soon' : '') + '</p>' +
            '<div class="card-actions">' + (soon
-             ? '<span class="btn soon" aria-disabled="true">Coming soon</span>'
+             ? (r.listen
+                 ? '<a class="btn fill" href="' + esc(r.listen) + '" target="_blank" rel="noopener">Pre-save</a>'
+                 : '<span class="btn soon" aria-disabled="true">Coming soon</span>')
              : '<a class="btn fill" href="' + esc(r.listen) + '" target="_blank" rel="noopener">Listen</a>') +
            lyr + '</div></article>';
   }
